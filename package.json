@@ -1,0 +1,34 @@
+{
+  "name": "svelte-capacitor-ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "dev:ios": "concurrently --kill-others --raw \"true\" --handle-input \"true\" --default-input-target \"1\" \"npm run dev\" \"npm run run:ios\"",
+
+    "run:ios": "npx cap run ios",
+    "run:android": "npx cap run android",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^4.0.1",
+    "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "@tsconfig/svelte": "^3.0.0",
+    "concurrently": "^7.3.0",
+    "svelte": "^3.49.0",
+    "svelte-check": "^2.8.0",
+    "svelte-preprocess": "^4.10.7",
+    "ts-morph": "^15.1.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^4.0.1",
+    "@capacitor/core": "^4.0.1",
+    "@capacitor/ios": "^4.0.1"
+  }
+}
